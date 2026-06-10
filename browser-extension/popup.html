@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 360px;
+      padding: 16px;
+      font: 14px/1.5 -apple-system, system-ui, sans-serif;
+      color: #1f2937;
+      background: #f9fafb;
+    }
+    h2 { font-size: 16px; margin-bottom: 12px; }
+    label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 4px; color: #374151; }
+    input, textarea {
+      width: 100%; padding: 8px 10px; border: 1px solid #d1d5db;
+      border-radius: 6px; font-size: 13px; font-family: inherit;
+      margin-bottom: 10px; outline: none;
+    }
+    input:focus, textarea:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+    textarea { min-height: 60px; resize: vertical; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 6px; font-size: 13px;
+      font-weight: 500; cursor: pointer; border: none;
+    }
+    .btn-primary { background: #3b82f6; color: #fff; width: 100%; justify-content: center; }
+    .btn-primary:hover { background: #2563eb; }
+    .btn-primary:disabled { opacity: 0.5; cursor: default; }
+    .status { font-size: 12px; margin-top: 8px; text-align: center; }
+    .status.success { color: #10b981; }
+    .status.error { color: #ef4444; }
+    .url-display {
+      font-size: 11px; color: #6b7280; margin-bottom: 10px;
+      word-break: break-all; background: #fff; padding: 8px 10px;
+      border-radius: 6px; border: 1px solid #e5e7eb;
+    }
+    .shortcut-hint { font-size: 11px; color: #9ca3af; margin-top: 10px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h2>📖 保存到学习收集</h2>
+
+  <label>标题</label>
+  <input type="text" id="title" placeholder="网页标题" />
+
+  <label>URL</label>
+  <div class="url-display" id="urlDisplay"></div>
+
+  <label>标签（逗号分隔）</label>
+  <input type="text" id="tags" placeholder="python, fastapi, tutorial" />
+
+  <label>备注（可选）</label>
+  <textarea id="note" placeholder="为什么保存这个链接？"></textarea>
+
+  <button class="btn btn-primary" id="saveBtn">💾 保存</button>
+  <div class="status" id="status"></div>
+  <div class="shortcut-hint">提示：按 Ctrl+Shift+S 快速保存</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

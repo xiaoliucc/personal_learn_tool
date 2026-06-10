@@ -1,0 +1,28 @@
+# 用户数据（不上传 GitHub）
+*.db
+*.db-journal
+*.db-wal
+
+# 环境配置（含 API Key）
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

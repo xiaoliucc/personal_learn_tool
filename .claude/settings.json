@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(printf '{\"name\":\"Python\",\"color\":\"#3b82f6\",\"description\":\"Python language\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/tags -H \"Content-Type: application/json\" -d @/tmp/test_tag.json)",
+      "Bash(printf '{\"name\":\"asyncio\",\"color\":\"#10b981\",\"parent_id\":\"4b27b5dd-3fe3-4f03-be7c-a8bbbba9aa70\",\"description\":\"async programming\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/tags -H \"Content-Type: application/json\" -d @/tmp/tag2.json)",
+      "Bash(printf '{\"name\":\"FastAPI\",\"color\":\"#f59e0b\",\"parent_id\":\"4b27b5dd-3fe3-4f03-be7c-a8bbbba9aa70\",\"description\":\"web framework\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/tags -H \"Content-Type: application/json\" -d @/tmp/tag3.json)",
+      "Bash(curl -s -X POST http://localhost:8000/api/materials -H \"Content-Type: application/json\" -d @/tmp/material1.json)",
+      "Bash(curl -s -X POST http://localhost:8000/api/materials -H \"Content-Type: application/json\" -d @/tmp/material2.json)",
+      "Bash(printf '{\"type\":\"snippet\",\"title\":\"asyncio hello world\",\"content\":\"import asyncio\\\\\\\\n\\\\\\\\nasync def main\\(\\):\\\\\\\\n print\\(\\\\\\\\\"hello\\\\\\\\\"\\)\\\\\\\\n await asyncio.sleep\\(1\\)\\\\\\\\n print\\(\\\\\\\\\"world\\\\\\\\\"\\)\\\\\\\\n\\\\\\\\nasyncio.run\\(main\\(\\)\\)\",\"language\":\"python\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/materials -H \"Content-Type: application/json\" -d @/tmp/material3.json)",
+      "Bash(curl -s -X PUT http://localhost:8000/api/materials/8e30da85-b2ec-4dcd-983f-3ee32ee788f4 -H \"Content-Type: application/json\" -d @/tmp/update.json)",
+      "Bash(curl -s \"http://localhost:8000/api/materials?type=snippet\")",
+      "Bash(curl -s \"http://localhost:8000/api/materials?search=async\")",
+      "Bash(curl -s http://localhost:8000/api/materials/8e30da85-b2ec-4dcd-983f-3ee32ee788f4)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/api/materials/nonexistent-id)",
+      "Bash(rm -rf frontend)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(rm -f src/components/HelloWorld.vue src/assets/vue.svg public/vite.svg)",
+      "Bash(ls src/components/ src/assets/)",
+      "Bash(npx vue-tsc *)",
+      "Bash(npm run *)",
+      "Bash(sleep 3 && cat /c/Users/liuyu/AppData/Local/Temp/claude/d--Learn-claude-project-personal/23935b3b-cb27-4a85-88b9-f96f555a88a1/tasks/br4h43fk0.output 2>/dev/null)",
+      "Read(//c/Users/liuyu/AppData/Local/Temp/claude/d--Learn-claude-project-personal/23935b3b-cb27-4a85-88b9-f96f555a88a1/tasks/**)",
+      "Bash(uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000)",
+      "Bash(python -m uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000)",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)"
+    ]
+  }
+}
